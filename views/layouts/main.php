@@ -99,7 +99,7 @@ echo Nav::widget([
       //  ['label' => 'About', 'url' => ['/site/about']],
        //   ['label' => 'База знаний', 'url' => ['/site/dbknow']],
         [
-            'label' =>'Территория Работодателя', 'url' => ['/site/about'],
+            'label' =>'Территория Работодателя',  'url' => ['/site/employerterritory'],'options'=>['id'=>'list1'],
             'items' => [
             ['label' => 'Профиль Работодателя', 'url' => ['/user/user/profile']],
                 ['label' => 'Разместить Оферту', 'url' => ['#']],
@@ -114,15 +114,29 @@ echo Nav::widget([
 ]
         ],
         [
-            'label' =>'Территория Студента', 'url' => ['/site/about'],
+            'label' =>'Территория Студента', 'url' => ['/site/studentterritory'],'options'=>['id'=>'list2'],
             'items' => [
                 ['label' => 'Профиль Студента', 'url' => ['/user/user/profile']],
                 ['label' => 'База знаний', 'url' => ['/user/post/index']],
                 Yii::$app->user->isGuest ? (
-                ['label' => 'Поиск Вакансий', 'url' => ['/login']]
+                [
+                    'label' => 'Поиск Вакансий','options'=>['id'=>'inside-list'], 'url' => ['/login'],
+                    'items' => [
+                        ['label' => 'Оферта Трудоустройства', 'url' => ['/login']],
+
+                        ['label' => 'Оферта Практики', 'url' => ['/login']],
+                    ]
+
+                ]
                 ) : (
                         [
-                                'label' => 'Поиск Вакансий', 'url' => ['/user/job/jobs'],
+                            'label' => 'Поиск Вакансий', 'options'=>['id'=>'inside-list'], 'url' => ['/user/job/jobs'],
+
+                            'items' => [
+                                ['label' => 'Оферта Трудоустройства', 'url' => ['/site/about']],
+
+                                ['label' => 'Оферта Практики', 'url' => ['/site/about']],
+                            ]
 
                         ]
                 ),
@@ -132,7 +146,7 @@ echo Nav::widget([
             ]
         ],
         [
-            'label' =>'Территория Выпускника', 'url' => ['/site/about'],
+            'label' =>'Территория Выпускника', 'url' => ['/site/about'],'options'=>['id'=>'list3'],
             'items' => [
                 Yii::$app->user->isGuest ? (
                 ['label' => 'Поиск Вакансий', 'url' => ['/login']]

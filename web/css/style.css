@@ -376,7 +376,7 @@ ul.navbar-nav{
     background: transparent;
     margin: 0 auto;
     margin-bottom: -5px;
-    display: inline-block;
+    display: inline-block !important;
     float: none;
 }
 ul.navbar-nav li{}
@@ -1930,16 +1930,23 @@ box{
 
     /* color: #fff !important; */
     background-color: #0077bf !important;
-    padding: 10px 0px;
+    padding:   0px;
 }
 .name-summary a{
 
     color: #fff;
+
+}
+.name-summary>div{
+
+    padding: 10px;
 }
 .name-summary h1{
     color: #fff;
     border-bottom: 1px dashed #19d062;
     font-size: 14px;
+    background-color: #085789;
+    padding: 15px;
 }
 
 
@@ -2287,7 +2294,7 @@ nav.subbar > ul.nav.nav-tabs > li.active > a {
 }
 
 .my-success {
-    border: 4px solid #d6e9c6;
+    border: 4px solid #54b502;
 }
 .my-success-span span{
     border: 4px solid #d6e9c6;
@@ -2296,7 +2303,7 @@ nav.subbar > ul.nav.nav-tabs > li.active > a {
     border: 4px solid #faebcc;
 }
 .my-warning{
-    border: 4px solid #faebcc;
+    border: 4px solid #a94442;
 }
 
 .navbar-brand{
@@ -2357,6 +2364,7 @@ width: 1300px;
     border: 1px solid #171718;
     text-align: justify;
     margin-bottom: 20px;
+    color: #333;
 }
 .ter-student ul{
     padding-left: 40px;
@@ -2383,7 +2391,7 @@ width: 1300px;
 }
 p{
     text-indent: 20px;
-
+    color: #333;
 }
 .btn-my{
     -webkit-transition: background-color .3s linear;
@@ -2413,7 +2421,7 @@ p{
     border: 1px solid #333;
 
     background-color: #81d6fc;
-    color: #fff;
+    color: #013739;
 }
 .btn-my3{
     -webkit-transition: background-color .3s linear;
@@ -2451,4 +2459,53 @@ p{
 .jobs-skill div{
 
     min-height: 60px;
+}
+.file-caption .file-caption-name{
+    padding-top: 10px;
+
+}
+.form-horizontal .form-group   i{
+    position: relative !important;
+    top: 3px !important;
+    left:0px !important;
+}
+
+.form-horizontal .form-group .file-footer-buttons i{
+    top: 0px !important;
+    left: -7px !important;
+}
+.form-horizontal .form-group .file-caption-icon  i{
+
+    top: 10px !important;
+
+}
+.kv-zoom-actions .btn{
+    padding: 0px !important;
+}
+.all-image >div:first-child{
+    display: none;
+
+}
+.breadcrumb{
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.bread-profile{
+    margin-top: 90px;
+    margin-left: 195px;
+}
+.logout:hover{
+    color: #0077c1 !important;
+}
+.my-alert{
+    position: absolute !important;
+    margin: 48px !important;
+    right: 150px !important;
+}
+.badge{
+    background-color: #108bd4 !important;
+}
+.tab-content > .active{
+    margin-top: 20px;
 }

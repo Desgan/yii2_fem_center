@@ -31,6 +31,56 @@ $(".search-btn").click(function(event){
 
 })(jQuery);
 
+
+
+/*==============================
+ HOVER MENU
+ ==============================*/
+
+$("#list1 ul ").addClass("ul1");
+$("#list2 ul ").addClass("ul2");
+$("#list3 ul ").addClass("ul3");
+
+$(".dropdown").mouseover(function(){
+    $(this).addClass("open");
+});
+
+$(".dropdown").mouseout(function(){
+    $(".dropdown").removeClass("open");
+});
+
+
+
+
+$('#list1 a').hover(
+    function () {
+        $('.ul1').stop().slideDown(400);
+    },
+    function () {
+        $('.ul1').stop().slideUp(400);
+    }
+);
+$('#list2 a').hover(
+    function () {
+        $('.ul2').stop().slideDown(400);
+    },
+    function () {
+        $('.ul2').stop().slideUp(400);
+    }
+);
+$('#list3 a').hover(
+    function () {
+        $('.ul3' ).stop().slideDown(400);
+    },
+    function () {
+        $('.ul3').stop().slideUp(400);
+    }
+);
+
+$(".dropdown-submenu ul").addClass("dropdown-menu");
+
+
+
 /*==============================
     ISOTOPW WORK
 ==============================*/
