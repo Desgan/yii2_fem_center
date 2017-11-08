@@ -27,7 +27,9 @@
         "mihaildev/yii2-ckeditor": "*",
         "skeeks/yii2-ckeditor": "*",
         "2amigos/yii2-ckeditor-widget": "*",
-        "asofter/yii2-imperavi-redactor": "*"
+        "asofter/yii2-imperavi-redactor": "*",
+        "kartik-v/yii2-widget-datepicker": "@dev",
+        "kartik-v/yii2-field-range": "*"
 
     },
     "require-dev": {

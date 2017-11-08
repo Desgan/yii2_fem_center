@@ -1943,7 +1943,7 @@ box{
 }
 .name-summary h1{
     color: #fff;
-    border-bottom: 1px dashed #19d062;
+    border-bottom: 1px dashed #fff;
     font-size: 14px;
     background-color: #085789;
     padding: 15px;
@@ -2508,4 +2508,24 @@ p{
 }
 .tab-content > .active{
     margin-top: 20px;
+}
+.click-search{
+    width: 100% !important;
+}
+#cl-search{
+    width: 0%;
+}
+#offerpractice-begin_date-kvdate{
+    padding: 0 40px;
+    margin: 0 0 25px 0;
+}
+.input-group.input-daterange .input-group-addon{
+    border: 1px solid #0077c1;
+}
+.time-practice{
+    text-align: center;
+    padding: 10px;
+}
+.border-description{
+    border-bottom: 1px dashed #ddd;
 }

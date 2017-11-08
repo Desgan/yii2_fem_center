@@ -26,9 +26,28 @@ $this->registerCss($hide_margin);
 
 $search_js = <<<JS
 new UISearch( document.getElementById( 'sb-search' ) );
+ 
+ 
+
+	
+
 JS;
 $this->registerJs($search_js);
 
+
+$search_click = <<<JS
+
+	$("#cl-search").mouseover(function(){ 
+							$(".width-search").addClass( 'click-search' ); 
+					}); 
+
+					$("#cl-search").mouseout(function(){ 
+								$(".width-search").removeClass( 'click-search' ); 
+					});
+
+ 
+JS;
+$this->registerJs($search_click);
 ?>
 <?php $this->beginPage() ?>
 <!doctype html>
@@ -102,7 +121,12 @@ echo Nav::widget([
             'label' =>'Территория Работодателя',  'url' => ['/site/employerterritory'],'options'=>['id'=>'list1'],
             'items' => [
             ['label' => 'Профиль Работодателя', 'url' => ['/user/user/profile']],
-                ['label' => 'Разместить Оферту', 'url' => ['#']],
+                Yii::$app->user->isGuest ? (
+                ['label' => 'Разместить Оферту', 'url' => ['/login']]
+                ) : (
+                ['label' => 'Разместить Оферту', 'url' => ['/user/offer/create']]
+                ),
+
                 Yii::$app->user->isGuest ? (
                 ['label' => 'Поиск Резюме', 'url' => ['/login']]
                 ) : (
@@ -180,14 +204,14 @@ NavBar::end();
 ?>
 
     <!-- Search form -->
-    <div class="main clearfix">
+    <div class="main clearfix width-search" id="cl-search">
 
         <div class="column">
             <div id="sb-search" class="sb-search">
                 <form>
                     <input class="sb-search-input" placeholder="Введите поисковой запрос" type="text" value="" name="search" id="search">
                     <input class="sb-search-submit" type="submit" value="">
-                    <span class="sb-icon-search"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    <span class="sb-icon-search "><i class="fa fa-search" aria-hidden="true"></i></span>
                 </form>
             </div>
         </div>
