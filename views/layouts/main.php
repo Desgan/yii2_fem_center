@@ -34,6 +34,15 @@ new UISearch( document.getElementById( 'sb-search' ) );
 JS;
 $this->registerJs($search_js);
 
+$gallery_js = <<<JS
+   $('#gallery').photobox('a',{ time:0 });
+ 
+ 
+
+	
+
+JS;
+$this->registerJs($gallery_js);
 
 $search_click = <<<JS
 
@@ -133,7 +142,7 @@ echo Nav::widget([
                 ['label' => 'Поиск Резюме', 'url' => ['/user/summary/summary']]
                 ),
 
-                        ['label' => 'Добавить Компанию в катлог', 'url' => ['#']],
+                        ['label' => 'Добавить Компанию в каталог', 'url' => ['user/company/create']],
                 ['label' => 'Разместить вакансию', 'url' => ['/user/job/create']],
 ]
         ],
@@ -146,6 +155,7 @@ echo Nav::widget([
                 [
                     'label' => 'Поиск Вакансий','options'=>['id'=>'inside-list'], 'url' => ['/login'],
                     'items' => [
+
                         ['label' => 'Оферта Трудоустройства', 'url' => ['/login']],
 
                         ['label' => 'Оферта Практики', 'url' => ['/login']],
@@ -157,16 +167,16 @@ echo Nav::widget([
                             'label' => 'Поиск Вакансий', 'options'=>['id'=>'inside-list'], 'url' => ['/user/job/jobs'],
 
                             'items' => [
-                                ['label' => 'Оферта Трудоустройства', 'url' => ['/site/about']],
+                                ['label' => 'Оферта Трудоустройства', 'url' => ['/user/job/jobs']],
 
-                                ['label' => 'Оферта Практики', 'url' => ['/site/about']],
+                                ['label' => 'Оферта Практики', 'url' => ['/user/offer/offer']],
                             ]
 
                         ]
                 ),
                 ['label' => 'Практика/Стажировка', 'url' => ['#']],
                 ['label' => 'Добавить Резюме', 'url' => ['/user/summary/create']],
-                ['label' => 'Презентации Компаний', 'url' => ['/#']],
+                ['label' => 'Презентации Компаний', 'url' => ['/user/company/company']],
             ]
         ],
         [

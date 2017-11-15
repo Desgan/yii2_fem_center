@@ -29,7 +29,14 @@
         "2amigos/yii2-ckeditor-widget": "*",
         "asofter/yii2-imperavi-redactor": "*",
         "kartik-v/yii2-widget-datepicker": "@dev",
-        "kartik-v/yii2-field-range": "*"
+        "kartik-v/yii2-field-range": "*",
+        "dvizh/yii2-gallery": "@dev",
+        "zelenin/string": "~0.0.0",
+        "dvizh/yii2-filter": "@dev",
+        "sanex/yii2-simple-filter": "dev-master",
+        "kartik-v/yii2-widget-select2": "@dev",
+        "kartik-v/yii2-widget-typeahead": "*",
+        "kartik-v/yii2-widgets": "*"
 
     },
     "require-dev": {

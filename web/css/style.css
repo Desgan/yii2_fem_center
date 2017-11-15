@@ -2529,3 +2529,55 @@ p{
 .border-description{
     border-bottom: 1px dashed #ddd;
 }
+.filter-block{
+    /* padding-bottom: 70px; */
+    margin-bottom: 70px;
+    text-align: center;
+    border: 1px dashed;
+    padding: 40px 0;
+}
+.tt-dataset {
+    overflow: hidden;
+}
+.form-placeholder .form-control::-webkit-input-placeholder {
+    color: #b1a6a6 !important;
+}
+.count-total{
+    color: #0077bf;
+    border-bottom: 1px solid;
+}
+.all-blocks >div{
+    padding-left: 0px !important;
+}
+.show-pointer{
+    display: block !important;
+}
+.one-line{
+    min-height: 80px;
+}
+.my-btn{
+    margin-top: 40px;
+    background-color: #0077c1;
+    border: none;
+    border-radius: 0px;
+    padding: 10px;
+}
+.image-face-company{
+    margin-top: 20px;
+}
+.block-text-company{
+    padding: 30px 30px 15px 30px;
+    font-size: 20px;
+    border-bottom: 2px dashed #0077c1;
+}
+.name-about-company{
+    font-size: 30px;
+    padding: 20px 0px;
+}
+#pbOverlay{
+    z-index: 99999999 !important;
+}
+textarea.form-control{
+    height: auto !important;
+    padding-top: 20px !important;
+}

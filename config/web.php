@@ -108,6 +108,7 @@ $config = [
                 'summary/<id:\d+>'=>'summary/view',
                 'page/<page:\d+>' => 'summary/summary',
                 '/summary' => 'summary/summary',
+
             ],
         ],
         'authManager' => [
@@ -133,6 +134,29 @@ $config = [
             'graphicsLibrary' => 'GD', //but really its better to use 'Imagick'
             'placeHolderPath' => '@webroot/uploads/store/no-avatar.jpg', // if you want to get placeholder when image not exists, string will be processed by Yii::getAlias
             'imageCompressionQuality' => 100, // Optional. Default value is 85.
+        ],
+        'filter' => [
+            'class' => 'dvizh\filter\Module',
+            'relationFieldName' => 'category_id', //Наименование поля, по значению которого будут привязыватья опции
+            //callback функция, которая возвращает варианты relationFieldName
+            'relationFieldValues' =>
+                function() {
+                    //Пример с деревом:
+                    $return = [];
+                    $categories = \common\models\Category::find()->all();
+                    foreach($categories as $category) {
+                        if(empty($category->parent_id)) {
+                            $return[] = $category;
+                            foreach($categories as $category2) {
+                                if($category2->parent_id == $category->id) {
+                                    $category2->name = ' --- '.$category2->name;
+                                    $return[] = $category2;
+                                }
+                            }
+                        }
+                    }
+                    return \yii\helpers\ArrayHelper::map($return, 'id', 'name');
+                },
         ],
     ],
     'params' => $params,

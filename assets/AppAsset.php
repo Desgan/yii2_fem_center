@@ -26,6 +26,7 @@ class AppAsset extends AssetBundle
         'css/normalize.css',
         'css/search/component.css',
         'css/search/default.css',
+        'css/photobox.css',
         'http://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,cyrillic-ext',
         'http://fonts.googleapis.com/css?family=Roboto:400,700,300,400italic,700italic&subset=latin,cyrillic-ext',
     ];
@@ -37,6 +38,7 @@ class AppAsset extends AssetBundle
         'js/search/classie.js',
         'js/search/modernizr.custom.js',
         'js/search/uisearch.js',
+        'js/jquery.photobox.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
