@@ -107,7 +107,7 @@ $config = [
                 '/job' => 'job/jobs',
                 'summary/<id:\d+>'=>'summary/view',
                 'page/<page:\d+>' => 'summary/summary',
-                '/summary' => 'summary/summary',
+
 
             ],
         ],

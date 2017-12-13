@@ -20,43 +20,11 @@ margin-bottom:  0px;
 }
 
 CSS;
-//маркер конца строки, обязательно сразу, без пробелов и табуляции
+
 $this->registerCss($hide_margin);
 
 
-$search_js = <<<JS
-new UISearch( document.getElementById( 'sb-search' ) );
- 
- 
 
-	
-
-JS;
-$this->registerJs($search_js);
-
-$gallery_js = <<<JS
-   $('#gallery').photobox('a',{ time:0 });
- 
- 
-
-	
-
-JS;
-$this->registerJs($gallery_js);
-
-$search_click = <<<JS
-
-	$("#cl-search").mouseover(function(){ 
-							$(".width-search").addClass( 'click-search' ); 
-					}); 
-
-					$("#cl-search").mouseout(function(){ 
-								$(".width-search").removeClass( 'click-search' ); 
-					});
-
- 
-JS;
-$this->registerJs($search_click);
 ?>
 <?php $this->beginPage() ?>
 <!doctype html>
@@ -114,7 +82,7 @@ $this->registerJs($search_click);
 <header class="header-section">
 <?php
 NavBar::begin([
-    'brandLabel' => '<img src="/images/logo.png" style="max-width: 250px"/>',
+    'brandLabel' => '<img src="/images/logo_.png" style="max-width: 250px;margin-top: -7px;"/>',
     'brandUrl' => Yii::$app->homeUrl,
     'options' => [
         'class' => 'navbar navbar-default small-container ',
@@ -123,27 +91,80 @@ NavBar::begin([
 echo Nav::widget([
     'options' => ['class' => 'nav navbar-nav '],
     'items' => [
-     //   ['label' => 'Главная', 'url' => ['/site/index']],
-      //  ['label' => 'About', 'url' => ['/site/about']],
-       //   ['label' => 'База знаний', 'url' => ['/site/dbknow']],
+
         [
             'label' =>'Территория Работодателя',  'url' => ['/site/employerterritory'],'options'=>['id'=>'list1'],
             'items' => [
             ['label' => 'Профиль Работодателя', 'url' => ['/user/user/profile']],
                 Yii::$app->user->isGuest ? (
-                ['label' => 'Разместить Оферту', 'url' => ['/login']]
+                [
+                    'label' => 'Информация о специальностях ФЭУ','options'=>['id'=>'inside-list'], 'url' => ['/login'],
+                    'items' => [
+
+                        ['label' => 'I ступень', 'url' => ['/login']],
+
+                        ['label' => 'II ступень', 'url' => ['/login']],
+                        ['label' => 'Практика', 'url' => ['/login']],
+                    ]
+
+                ]
                 ) : (
-                ['label' => 'Разместить Оферту', 'url' => ['/user/offer/create']]
+                [
+                    'label' => 'Информация о специальностях ФЭУ', 'options'=>['id'=>'inside-list'], 'url' => ['#'],
+
+                    'items' => [
+                        ['label' => 'I ступень', 'url' => ['#']],
+
+                        ['label' => 'II ступень', 'url' => ['#']],
+                        ['label' => 'Практика', 'url' => ['#']],
+                    ]
+
+                ]
+                ),
+                Yii::$app->user->isGuest ? (
+                ['label' => 'Заявка на подготовку специалиста
+', 'url' => ['/login']]
+                ) : (
+                ['label' => 'Заявка на подготовку специалиста
+', 'url' => ['#']]
                 ),
 
+
                 Yii::$app->user->isGuest ? (
-                ['label' => 'Поиск Резюме', 'url' => ['/login']]
+                [
+                        'label' => 'Разместить Оферту', 'url' => ['/login'],'options'=>['id'=>'add-doc-emp'],
+                    'items' => [
+
+                        ['label' => 'Практика', 'url' => ['/login']],
+
+                        ['label' => 'Трудоустройство', 'url' => ['/login']],
+
+                    ]
+
+                ]
                 ) : (
-                ['label' => 'Поиск Резюме', 'url' => ['/user/summary/summary']]
+                [
+                        'label' => 'Разместить Оферту', 'url' => ['/user/offer/create'],'options'=>['id'=>'add-doc-emp'],
+                    'items' => [
+
+                        ['label' => 'Практика', 'url' => ['/user/offer/create']],
+
+                        ['label' => 'Трудоустройство', 'url' => ['/user/job/create']],
+
+                    ]
+
+                ]
+                ),
+                ['label' => 'Распределение выпускников', 'url' => ['#']],
+                ['label' => 'Филиалы кафедр', 'url' => ['#']],
+                Yii::$app->user->isGuest ? (
+                ['label' => 'База Резюме', 'url' => ['/login']]
+                ) : (
+                ['label' => 'База Резюме', 'url' => ['/user/summary/summary']]
                 ),
 
                         ['label' => 'Добавить Компанию в каталог', 'url' => ['user/company/create']],
-                ['label' => 'Разместить вакансию', 'url' => ['/user/job/create']],
+
 ]
         ],
         [
@@ -174,13 +195,14 @@ echo Nav::widget([
 
                         ]
                 ),
-                ['label' => 'Практика/Стажировка', 'url' => ['#']],
+                /*['label' => 'Практика/Стажировка', 'url' => ['#']],*/
                 ['label' => 'Добавить Резюме', 'url' => ['/user/summary/create']],
                 ['label' => 'Презентации Компаний', 'url' => ['/user/company/company']],
+                ['label' => 'HR-консультация', 'url' => ['#']],
             ]
         ],
         [
-            'label' =>'Территория Выпускника', 'url' => ['/site/about'],'options'=>['id'=>'list3'],
+            'label' =>'Территория Выпускника', 'url' => ['/site/territorygraduates'],'options'=>['id'=>'list3'],
             'items' => [
                 Yii::$app->user->isGuest ? (
                 ['label' => 'Поиск Вакансий', 'url' => ['/login']]
@@ -188,7 +210,8 @@ echo Nav::widget([
                 ['label' => 'Поиск Вакансий', 'url' => ['/user/job/jobs']]
                 ),
                 ['label' => 'Добавить Резюме', 'url' => ['/user/summary/create']],
-                ['label' => 'Презентации Компаний', 'url' => ['#']],
+                ['label' => 'Презентации Компаний', 'url' => ['/user/company/company']],
+                ['label' => 'Заявка о сотрудничестве', 'url' => ['#']],
             ]
         ],
         ['label' => 'Регистрация', 'url' => ['/signup'], 'linkOptions'=>  ['class' => '']
@@ -327,6 +350,8 @@ NavBar::end();
         </div>
     </div>
 </section>
+<p class="back-top"><a href="#"><b style="position: absolute;"></b><span></span></a><p>
+
 <footer class="footer">
     <div class="container">
         <div class="row">

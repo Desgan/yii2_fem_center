@@ -2,7 +2,22 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Центр Планирования и Развития Карьеры';
+
+$slide_hover = <<< JS
+
+$( ".slider-section" ).hover(
+  function() {
+    $( 'a.carousel-control.left').show("slow");
+    $( 'a.carousel-control.right').show("slow");
+  }, function() {
+     $( 'a.carousel-control.left' ).hide(1000);
+      $( 'a.carousel-control.right').hide(1000);
+  }
+);
+JS;
+$this->registerJs($slide_hover);
+
 ?>
 <section class="slider-section">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -15,8 +30,8 @@ $this->title = 'My Yii Application';
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-            <div class="item active" >
-                <img src="/images/slider/jeans-paper_00400683.jpg" width="1648" height="600" alt="">
+            <div class="item active"  style="    min-height: 600px;background-position: bottom center;background-repeat: no-repeat; background-image: url('/images/slider/sl.png')">
+
                 <div class="carousel-caption">
                     <h2>ЦЕНТР КАРЬЕРА</h2>
                     <h4 style="    color: #fff;">Содействие трудоустройству, профессиональному развитию и карьерному росту
@@ -55,54 +70,134 @@ $this->title = 'My Yii Application';
         </a>
     </div>
 </section>
-<section class="service-section">
+<section class="col-md-12" style="padding: 40px 0">
     <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6 wow fadeInRight animated" data-wow-delay="0.1s">
-                <div class="service-item">
-                    <i class="pe-7s-settings"></i>
-                    <h3>ЛЕГКО В ИСПОЛЬЗОВАНИИ</h3>
-                    <p>Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.</p>
+    <div field="text" class="t-text t-text_md ">
+        <div style="text-align:center;" data-customstyle="yes"><span style="font-size: 30px;">
+                              <strong>Как происходит оказание помощи в трудоустройстве?</strong>
+                          </span><br></div>
+    </div>
+    <div class="t-container col-md-12 " style="padding: 40px 0">
+        <div class="t073__col t-col col-md-4">
+            <div class="t073__tablewrapper">
+                <div class="t073__circlewrapper">
+                    <div class=" circle t-title" field="number" style="background-color:#0077c1; color:#ffffff;">
+                        <span>1</span>
+                    </div>
+                </div>
+                <div class="t073__textwrapper">
+                    <div class="t-title text-center" field="title">Регистрация</div>
+                    <div class="t073__blockdescr t-text t-text_xs" field="descr">
+                        Значимость этих проблем настолько очевидна, что укрепление и развитие структуры способствует подготовки и реализации форм развития. Задача организации, в особенности же укрепление и развитие структуры позволяет выполнять
+                        важные задания по разработке новых предложений.
+                    </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 wow fadeInRight animated" data-wow-delay="0.2s">
-                <div class="service-item">
-                    <i class="pe-7s-safe"></i>
-                    <h3>БОЛЬШАЯ БАЗА КОМПАНИЙ</h3>
-                    <p>Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.</p>
+        </div>
+        <div class="t073__col t-col col-md-4">
+            <div class="t073__tablewrapper">
+                <div class="t073__circlewrapper">
+                    <div class="circle t-title " field="number2" style="background-color:#0077c1; color:#ffffff;">
+                        <span> 2</span>
+                    </div>
+                </div>
+                <div class="t073__textwrapper">
+                    <div class=" t-title text-center" field="title2">Создание документа</div>
+                    <div class="t073__blockdescr t-text t-text_xs" field="descr2">Значимость этих проблем настолько очевидна, что укрепление и развитие структуры способствует подготовки и реализации форм развития. Задача организации, в особенности же укрепление и развитие структуры позволяет выполнять важные задания по разработке новых предложений.
+                      </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 wow fadeInRight animated" data-wow-delay="0.3s">
-                <div class="service-item">
-                    <i class="pe-7s-global"></i>
-                    <h3>ДРУЖЕСТВЕННЫЕ ОТНОШЕНИЯ</h3>
-                    <p>Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.</p>
+        </div>
+        <div class="t073__col t-col col-md-4">
+            <div class="t073__tablewrapper">
+                <div class="t073__circlewrapper">
+                    <div class="circle t-title" field="number3" style="background-color:#0077c1; color:#ffffff;">
+                        <span> 3</span>
+
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6 wow fadeInRight animated" data-wow-delay="0.4s">
-                <div class="service-item">
-                    <i class="pe-7s-headphones"></i>
-                    <h3>ВСЕГДА НА СВЯЗИ</h3>
-                    <p>Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset, doctus volumus explicari qui ex, appareat similique an usu.</p>
+                <div class="t073__textwrapper">
+                    <div class=" t-title text-center" field="title3">
+                        Трудоустройство
+                    </div>
+                    <div class="t073__blockdescr t-text t-text_xs" field="descr3">
+                        Значимость этих проблем настолько очевидна, что укрепление и развитие структуры способствует подготовки и реализации форм развития. Задача организации, в особенности же укрепление и развитие структуры позволяет выполнять важные задания по разработке новых предложений.
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 </section>
 <section class="container" style="    margin-bottom: 80px;">
     <div class="row">
-        <div class="row">
+
 
             <div class="col-md-4 col-sm-6">
+
+                <div class="effect eff-25">
+
+                    <div class="overlay">
+                        <span>Территория работодателя</span>
+                        <div class="icon"></div>
+                    </div>
+                    <div class="flash flash-1"></div>
+                    <div class="flash flash-2"></div>
+                    <div class="flash flash-3"></div>
+                    <div class="caption">
+                        <h4>Территория работодателя</h4>
+                        <p style="visibility: hidden"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut. </p>
+                        <a class="btn btn-success my-btn" href="<?= yii\helpers\Url::to(['/site/employerterritory'])?>" title="Подробнее">Подробнее</a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-4 col-sm-6">
+
+            <div class="effect eff-26"  >
+
+                <div class="overlay">
+                    <span>Территория Студента</span>
+                    <div class="icon"></div>
+                </div>
+                <div class="flash"></div>
+                <div class="caption">
+                    <h4>Территория Студента</h4>
+                    <p style="visibility: hidden"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut. </p>
+                    <a class="btn btn-success my-btn" href="<?= yii\helpers\Url::to(['/site/studentterritory'])?> " title="Подробнее">Подробнее</a>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+            <div class="effect eff-27">
+
+                <div class="overlay">
+                   <span>Территория Выпускника</span>
+                    <div class="icon"></div>
+                </div>
+                <div class="circle">
+                    <div class="half-circle half-circle-left"></div>
+                    <div class="half-circle half-circle-right"></div>
+                </div>
+                <div class="caption">
+                    <h4>Территория Выпускника</h4>
+                    <p style="visibility: hidden"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut. </p>
+                    <a class="btn btn-success my-btn" href="<?= yii\helpers\Url::to(['/site/territorygraduates/'])?>" title="Подробнее">Подробнее</a>
+                </div>
+            </div>
+            </div>
+
+
+          <!--  <div class="col-md-4 col-sm-6">
                 <div class="box">
                     <div class="pic">
                         <img src="/images/ter_pro.jpg" alt="Территория работодателя"/>
                     </div>
-                  <!--  <ul class="social-links">
-                        <li><a href="#" class="fa fa-facebook"></a></li>
-                        <li><a href="#" class="fa fa-google"></a></li>
-                        <li><a href="#" class="fa fa-twitter"></a></li>
-                    </ul>-->
+
                     <div class="over-layer">
                         <h4 class="post">
                             <a href="<?= yii\helpers\Url::to(['/site/employerterritory'])?>">Территория Работодателя
@@ -133,19 +228,56 @@ $this->title = 'My Yii Application';
             <div class="col-md-4 col-sm-6">
                 <div class="box">
                     <div class="pic">
-                        <img src="/images/ter_ofer.jpg" alt="Оферта"/>
+                        <img src="/images/ter_ofer.jpg" alt="Территория Выпускника"/>
                     </div>
 
                     <div class="over-layer">
                         <h4 class="post">
-                            <a href="#">Оферта
+                            <a href="<?= yii\helpers\Url::to(['/site/territorygraduates/'])?>"> Территория Выпускника
                             <small>Подробнее</small>
                             </a>
                         </h4>
 
                     </div>
                 </div>
+            </div>-->
+    </div>
+</section>
+<section class="service-section">
+    <div class="container">
+        <div style="text-align:center;padding: 50px 0px;" data-customstyle="yes"><span style="font-size: 30px;">
+                              <strong>Наши преимущества</strong>
+                          </span><br></div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 wow fadeInRight animated" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <i class="pe-7s-settings"></i>
+                    <h3>ЛЕГКО В ИСПОЛЬЗОВАНИИ</h3>
+
+                </div>
             </div>
+            <div class="col-md-3 col-sm-6 wow fadeInRight animated" data-wow-delay="0.2s">
+                <div class="service-item">
+                    <i class="pe-7s-safe"></i>
+                    <h3>БОЛЬШАЯ БАЗА КОМПАНИЙ</h3>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 wow fadeInRight animated" data-wow-delay="0.3s">
+                <div class="service-item">
+                    <i class="pe-7s-global"></i>
+                    <h3>ДРУЖЕСТВЕННЫЕ ОТНОШЕНИЯ</h3>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 wow fadeInRight animated" data-wow-delay="0.4s">
+                <div class="service-item">
+                    <i class="pe-7s-headphones"></i>
+                    <h3>ВСЕГДА НА СВЯЗИ</h3>
+
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section class="new-section">

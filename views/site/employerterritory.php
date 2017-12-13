@@ -30,24 +30,67 @@ use yii\widgets\Pjax;
         <div class="col-md-12 block-btn">
             <h1>Ваши возможности</h1>
             <div class="col-md-4">
-                <a class="custom-btn" href="<?= yii\helpers\Url::to(['/user/job/create'])?>">
-                    <button class="btn btn-default btn-my"> Создать вакансию </button>
-                </a>
+                <?php
+
+                if (Yii::$app->user->isGuest ):
+                    ?>
+                    <a class="custom-btn" href="<?= yii\helpers\Url::to(['/login'])?>">
+                        <button class="btn btn-default btn-my"> Создать вакансию </button>
+                    </a>
+                <?php endif; ?>
+                <?php
+
+                if (!Yii::$app->user->isGuest  ):
+                    ?>
+                    <a class="custom-btn" href="<?= yii\helpers\Url::to(['/user/job/create'])?>">
+                        <button class="btn btn-default btn-my"> Создать вакансию </button>
+                    </a>
+                <?php endif; ?>
+
+
 
 
 
             </div>
             <div class="col-md-4">
-                <a class="custom-btn" href="<?= yii\helpers\Url::to(['/user/summary/summary'])?>">
+
+                <?php
+
+                if (Yii::$app->user->isGuest ):
+                ?>
+                <a class="custom-btn" href="<?= yii\helpers\Url::to(['/login'])?>">
                     <button class="btn btn-default btn-my2"> Доступные Резюме</button>
                 </a>
+                <?php endif; ?>
+                <?php
 
+                if (!Yii::$app->user->isGuest  ):
+                    ?>
+                    <a class="custom-btn" href="<?= yii\helpers\Url::to(['/user/summary/summary'])?>">
+                        <button class="btn btn-default btn-my2"> Доступные Резюме</button>
+                    </a>
+                <?php endif; ?>
 
             </div>
             <div class="col-md-4">
-                <a class="custom-btn">
-                    <button class="btn btn-default btn-my3">Разместить оферту </button>
-                </a>
+                <?php
+
+                if (Yii::$app->user->isGuest ):
+                    ?>
+                    <a class="custom-btn" href="<?= yii\helpers\Url::to(['/login'])?>"  >
+                        <button class="btn btn-default btn-my3">Разместить оферту </button>
+                    </a>
+                <?php endif; ?>
+                <?php
+
+                if (!Yii::$app->user->isGuest  ):
+                    ?>
+                    <a class="custom-btn" href="<?= yii\helpers\Url::to(['/user/offer/create'])?>"  >
+                        <button class="btn btn-default btn-my3">Разместить оферту </button>
+                    </a>
+                <?php endif; ?>
+
+
             </div>
         </div>
     </div>

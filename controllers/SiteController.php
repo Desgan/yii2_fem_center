@@ -149,5 +149,9 @@ class SiteController extends Controller
     {
         return $this->render('aboutus');
     }
+    public function actionTerritorygraduates()
+    {
+        return $this->render('territorygraduates');
+    }
 
 }

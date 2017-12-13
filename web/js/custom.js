@@ -37,72 +37,144 @@ $(".search-btn").click(function(event){
  HOVER MENU
  ==============================*/
 
-$("#list1 ul ").addClass("ul1");
-$("#list2 ul ").addClass("ul2");
-$("#list3 ul ").addClass("ul3");
 
-$(".dropdown").mouseover(function(){
-    $(this).addClass("open");
+$("#inside-list >ul").addClass("dropdown-menu i2");
+
+$("#add-doc-emp >ul").addClass("dropdown-menu");
+
+
+$("#list1 >a").removeAttr( "data-toggle");
+$("#list2 >a").removeAttr( "data-toggle");
+$("#list3 >a").removeAttr( "data-toggle");
+
+
+
+$('ul.nav li.dropdown').hover(function() {
+    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 });
 
-$(".dropdown").click(function(){
-    $(".dropdown").removeClass("open");
+
+
+
+
+
+/*==============================
+    back top
+==============================*/
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if($(this).scrollTop() >=300)
+            $(".back-top").fadeIn(1000);
+        else
+            $(".back-top").fadeOut(1000);
+    });
+    $(".back-top a").click(function(event){
+        event.preventDefault();
+        $("html,body").animate({scrollTop: 0}, 1500);
+    });
 });
 
 
+/*==============================
+   effect paralax
+==============================*/
+
+myParaxify = paraxify('.paraxify');
 
 
-$('#list1 a').hover(
-    function () {
-        $('.ul1').stop().slideDown(400);
-    },
-    function () {
-        $('.ul1').stop().slideUp(400);
-    }
-);
-/*$('#list2 a').hover(
-    function () {
-        $('.ul2').stop().slideDown(400);
-    },
-    function () {
-        $('.ul2').stop().slideUp(400);
-    }
-);*/
 
-$("#list2 a").mouseover(function(){
-    $('.ul2').stop().slideDown(400);
-    $("#inside-list .ul2").css("display","none");
-    $("#inside-list .ul2").addClass("dropdown-menu");
+/*==============================
+    search input
+==============================*/
+
+new UISearch( document.getElementById( 'sb-search' ) );
+
+
+$("#cl-search").mouseover(function(){
+    $(".width-search").addClass( 'click-search' );
 });
 
-$("#list2 a").click(function(){
-    $('.ul2').stop().slideUp(400);
-
+$("#cl-search").mouseout(function(){
+    $(".width-search").removeClass( 'click-search' );
 });
 
-$('#list3 a').hover(
-    function () {
-        $('.ul3' ).stop().slideDown(400);
-    },
-    function () {
-        $('.ul3').stop().slideUp(400);
-    }
-);
+/*==============================
+    gallery
+==============================*/
 
-$(".dropdown-submenu ul").mouseover(function(){
-    $('.dropdown-submenu ul' ). addClass("dropdown-menu");
+$('#gallery').photobox('a',{ time:0 });
+
+/*==============================
+    for count char in input
+==============================*/
+
+$(document).ready(function()
+{
+    $("#contentbox").keyup(function()
+    {
+        var box=$(this).val();
+        var main = box.length *100;
+        var value= (main / 145);
+        var count= 145 - box.length;
+        if(box.length <= 145)
+        {
+            $('#count').html(count);
+            $('#bar').animate(
+                {
+                    "width": value+'%',
+                }, 1);
+        }
+        else
+        {
+            $('#bar').attr({ class: 'progress-bar progress-bar-danger progress-bar-striped' });
+        }
+        return false;
+    });
+    $("#resultsummary-expirianceworktext").keyup(function()
+    {
+        var box=$(this).val();
+        var main = box.length *100;
+        var value= (main / 10000);
+        var count= 10000 - box.length;
+        if(box.length <= 10000)
+        {
+            $('#count').html(count);
+            $('#bar').animate(
+                {
+                    "width": value+'%',
+                }, 1);
+        }
+        else
+        {
+            $('#bar').attr({ class: 'progress-bar progress-bar-danger progress-bar-striped' });
+        }
+        return false;
+    });
+    $("#resultsummary-proskill").keyup(function()
+    {
+        var box=$(this).val();
+        var main = box.length *100;
+        var value= (main / 10000);
+        var count= 10000 - box.length;
+        if(box.length <= 10000)
+        {
+            $('#count1').html(count);
+            $('#bar1').animate(
+                {
+                    "width": value+'%',
+                }, 1);
+        }
+        else
+        {
+            $('#bar1').attr({ class: 'progress-bar progress-bar-danger progress-bar-striped' });
+        }
+        return false;
+    });
 
 });
-
-$("#inside-list").mouseover(function(){
-    $('#inside-list .ul2').addClass("show-pointer");
-
-});
- $("body").click(function(){
-    $('.ul2').stop().slideUp(400);
- });
-
-
 
 
 /*==============================

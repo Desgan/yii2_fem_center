@@ -14,6 +14,7 @@ use yii\widgets\Pjax;
               <text>
                   <h1>Уважаемые студенты и выпускники</h1>
 
+
                   <p><center><strong>Гродненского государственного университета имени Янки Купалы!</strong></center></p>
 
                   <p>Центр Карьера предоставляет уникальную возможность студентам и выпускникам, которые стремятся к новым знаниям и достижениям, быть конкурентоспособными на рынке труда.</p>
@@ -31,8 +32,64 @@ use yii\widgets\Pjax;
 
                       <li>познакомиться с деятельностью компаний, и поучаствовать в проектной деятельности.</li>
                   </ul>
+                <section class="col-md-12" style="padding: 40px 0">
+                  <div field="text" class="t-text t-text_md ">
+                      <div style="text-align:center;" data-customstyle="yes"><span style="font-size: 30px;">
+                              <strong>Как происходит оказание помощи в трудоустройстве?</strong>
+                          </span><br></div>
+                  </div>
+                  <div class="t-container col-md-12 " style="padding: 40px 0">
+                      <div class="t073__col t-col col-md-4">
+                          <div class="t073__tablewrapper">
+                              <div class="t073__circlewrapper">
+                                  <div class=" circle t-title" field="number" style="background-color:#5299f0; color:#ffffff;">
+                                      <span>1</span>
+                                  </div>
+                              </div>
+                              <div class="t073__textwrapper">
+                                  <div class="t-title text-center" field="title">Регистрация</div>
+                                  <div class="t073__blockdescr t-text t-text_xs" field="descr">
+                                      Слушатель на протяжении курса работает над своим портфолио вместе с преподавателем и к концу обучения должен предоставить законченный вариант нескольких проектов.
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="t073__col t-col col-md-4">
+                          <div class="t073__tablewrapper">
+                              <div class="t073__circlewrapper">
+                                  <div class="circle t-title " field="number2" style="background-color:#5299f0; color:#ffffff;">
+                                      <span> 2</span>
+                                     </div>
+                              </div>
+                              <div class="t073__textwrapper">
+                                  <div class=" t-title text-center" field="title2">Создание резюме</div>
+                                  <div class="t073__blockdescr t-text t-text_xs" field="descr2">Преподаватель пишет подробную характеристику на студента и передает в службу трудоустройства IT-школы Myfreedom.</div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="t073__col t-col col-md-4">
+                          <div class="t073__tablewrapper">
+                              <div class="t073__circlewrapper">
+                                  <div class="circle t-title" field="number3" style="background-color:#5299f0; color:#ffffff;">
+                                      <span> 3</span>
 
-                  <h1>Проект «Электронное портфолио»</h1>
+                                      </div>
+                              </div>
+                              <div class="t073__textwrapper">
+                                  <div class=" t-title text-center" field="title3" >
+                                      Трудоустраиваем
+                                  </div>
+                                  <div class="t073__blockdescr t-text t-text_xs" field="descr3">
+                                      Менеджер IT-школы Myfreedom передает выпускные работы с характеристикой в компании, нуждающиеся в специалистах.
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </section>
+                  <div class="col-md-12">
+                  <h1 >Проект «Электронное портфолио»</h1>
+                  </div>
 
                   <p>Успешная карьера, реализация всего накопленного потенциала в ходе обучения и профессиональной подготовки – сегодня одна из самых привлекательных целей для большинства выпускников.</p>
 
@@ -78,24 +135,66 @@ use yii\widgets\Pjax;
     <div class="col-md-12 block-btn">
         <h1>История  успеха</h1>
         <div class="col-md-4">
-            <a class="custom-btn" href="<?= yii\helpers\Url::to(['/user/summary/create'])?>">
-                <button class="btn btn-default btn-my"> Создать резюме </button>
-            </a>
+            <?php
+
+            if (Yii::$app->user->isGuest ):
+                ?>
+                <a class="custom-btn" href="<?= yii\helpers\Url::to(['/login'])?>">
+                    <button class="btn btn-default btn-my2">  Создать резюме</button>
+                </a>
+            <?php endif; ?>
+            <?php
+
+            if (!Yii::$app->user->isGuest  ):
+                ?>
+                <a class="custom-btn" href="<?= yii\helpers\Url::to(['/user/summary/create'])?>">
+                    <button class="btn btn-default btn-my"> Создать резюме </button>
+                </a>
+            <?php endif; ?>
+
 
 
 
         </div>
         <div class="col-md-4">
-            <a class="custom-btn" href="<?= yii\helpers\Url::to(['/user/job/jobs'])?>">
-                <button class="btn btn-default btn-my2"> Доступные Вакансии</button>
-            </a>
+            <?php
+
+            if (Yii::$app->user->isGuest ):
+                ?>
+                <a class="custom-btn" href="<?= yii\helpers\Url::to(['/login'])?>">
+                    <button class="btn btn-default btn-my2"> Доступные Вакансии</button>
+                </a>
+            <?php endif; ?>
+            <?php
+
+            if (!Yii::$app->user->isGuest  ):
+                ?>
+                <a class="custom-btn" href="<?= yii\helpers\Url::to(['/user/job/jobs'])?>">
+                    <button class="btn btn-default btn-my2"> Доступные Вакансии</button>
+                </a>
+            <?php endif; ?>
+
 
 
         </div>
         <div class="col-md-4">
-            <a class="custom-btn">
-                <button class="btn btn-default btn-my3"> Практика/стажировка </button>
-            </a>
+            <?php
+
+            if (Yii::$app->user->isGuest ):
+                ?>
+                <a class="custom-btn" href="<?= yii\helpers\Url::to(['/login'])?>"  >
+                    <button class="btn btn-default btn-my3"> Практика/стажировка </button>
+                </a>
+            <?php endif; ?>
+            <?php
+
+            if (!Yii::$app->user->isGuest  ):
+                ?>
+                <a class="custom-btn" href="<?= yii\helpers\Url::to(['/user/offer/offer'])?>"  >
+                    <button class="btn btn-default btn-my3"> Практика/стажировка </button>
+                </a>
+            <?php endif; ?>
+
         </div>
     </div>
     </div>
