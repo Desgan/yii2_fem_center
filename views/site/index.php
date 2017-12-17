@@ -70,6 +70,10 @@ $this->registerJs($slide_hover);
         </a>
     </div>
 </section>
+
+
+
+
 <section class="col-md-12" style="padding: 40px 0">
     <div class="container">
     <div field="text" class="t-text t-text_md ">

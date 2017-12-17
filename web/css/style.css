@@ -1180,12 +1180,13 @@ a.carousel-control.right > span{
 }
 .contact-section .left-content{}
 .contact-section .left-content h1{
-    font-size: 72px;
+    font-size: 48px;
     margin: 0;
     padding: 0;
     color: #fff;
     line-height: 1;
     font-weight: 300;
+    margin-bottom: 10px;
 }
 .contact-section .left-content h1 span{
     color: #0080cd;
@@ -1208,6 +1209,7 @@ a.carousel-control.right > span{
     font-weight: 300;
     line-height: 24px;
     font-family: 'Roboto';
+    text-indent: 0px;
 }
 .contact-section .left-content p b{
     color: #0080cd;
@@ -1282,13 +1284,17 @@ a.carousel-control.right > span{
 
 .contact-form .input-group input.contact-submit{
     display: inline-block;
-    background: #0080cd !important;
+    background: #0080cd  ;
     padding: 10px 40px;
     border: none;
     color: #fff !important;
     margin-top: 30px;
     font-size: 16px;
     text-transform: uppercase;
+}
+.contact-submit:hover{
+
+    background: #184962 !important;
 }
 
 /*
@@ -2335,7 +2341,7 @@ width: 1300px;
      background-color: #fff;
 
     margin: 10px;
-    border: 1px solid #0078c1;
+    /*border: 1px solid #0078c1;*/
     min-height: 800px;
 }
 .post-student-index{
@@ -2686,7 +2692,7 @@ a.carousel-control.left, a.carousel-control.right{
 .box-btn{
     box-shadow: 0px 0px 16px 0px rgba(0,0,0,1);
     background-color: white;
-    background-image: repeating-radial-gradient(circle at center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+   /* background-image: repeating-radial-gradient(circle at center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);*/
     background-size: 3px 3px;
     color: #000;
 }
@@ -2731,4 +2737,27 @@ a.carousel-control.left, a.carousel-control.right{
     color: #0471b5;
 
 
+}
+@media (min-width: 979px) {
+    ul.nav li.dropdown:hover > ul.dropdown-menu {
+        display: block;
+        margin-top:0px;
+    }
+}
+.footer{
+    height: auto !important;
+}
+.baze-h3-name{
+    font-size: 26px;
+    border-bottom: 1px dashed #333;
+}
+.preview-name-post{
+    top: 91px;
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+
+    background-color: #333;
 }

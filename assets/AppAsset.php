@@ -29,6 +29,13 @@ class AppAsset extends AssetBundle
         'css/photobox.css',
         'css/bluer.css',
         'css/paraxify.css',
+        //img
+      //  'css/style_common.css',
+      //  'css/style_img.css',
+        //circle
+        'css/style_block_circle.css',
+        'css/common.css',
+
 
         'http://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,cyrillic-ext',
         'http://fonts.googleapis.com/css?family=Roboto:400,700,300,400italic,700italic&subset=latin,cyrillic-ext',
@@ -37,7 +44,8 @@ class AppAsset extends AssetBundle
         'js/isotope.pkgd.min.js',
         'js/owl.carousel.min.js',
         'js/wow.min.js',
-
+       // 'js/modernizr.custom.69142.js'
+        'js/modernizr.custom.79639.js',
         'js/search/classie.js',
         'js/search/modernizr.custom.js',
         'js/search/uisearch.js',
@@ -45,6 +53,8 @@ class AppAsset extends AssetBundle
         'js/bluer.js',
         'js/paraxify.min.js',
         'js/custom.js',
+
+
     ];
     public $depends = [
         'yii\web\YiiAsset',

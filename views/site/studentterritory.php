@@ -5,12 +5,24 @@ use yii\grid\GridView;
 use yii\widgets\Pjax;
 ?>
 
-<div style="margin-top: 20px;"></div>
 
 <div class="container">
 
+    <div class="col-md-12 all-page">
+        <?
 
-    <div class="col-md-12 ter-student">
+
+        echo \yii\widgets\Breadcrumbs::widget([
+            'itemTemplate' => "<li><i>{link}</i></li>\n", // template for all links
+            'links' => [
+
+                ['label' => 'Территория студента ' ],
+
+            ],
+        ]);
+
+        ?>
+    <div class="col-md-12  ">
               <text>
                   <h1>Уважаемые студенты и выпускники</h1>
 
@@ -198,6 +210,6 @@ use yii\widgets\Pjax;
         </div>
     </div>
     </div>
-
+    </div>
 </div>
 

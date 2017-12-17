@@ -286,13 +286,18 @@ NavBar::end();
         <div class="row">
             <div class="col-md-6 wow fadeInLeft animated">
                 <div class="left-content">
-                    <h1><span>M</span>art</h1>
-                    <h3>We'd love To Meet You In Person Or Via The Web!</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel nulla sapien. Class aptent tacitiaptent taciti sociosqu ad lit himenaeos. Suspendisse massa urna, luctus ut vestibulum necs et, vulputate quis urna. Donec at commodo erat.</p>
+                    <h1><span>Ц</span>ентр планирования и</h1>
+                    <h1><span>Р</span>азвития карьеры</h1>
+
+                    <p>
+
+                        Если у Вас возникли вопросы по содержанию сайта,
+                        обращайтесь по телефонам: 73-19-52, 73-19-72</p>
                     <div class="contact-info">
-                        <p><b>Адрес:</b> 123 Elm St. New York City, NY</p>
-                        <p><b>Телефон:</b> 1.555.555.5555</p>
-                        <p><b>Email:</b> info@yourdomain.com</p>
+
+                        <p><b>Адрес:</b> Республика Беларусь, г. Гродно,  ул. Гаспадарчая, 23</p>
+                        <p><b>Телефон:</b>+375 (152) 73-19-00, факс: +375 (152) 73-19-10</p>
+                        <p><b>Email:</b> i.i.dorniak@gmail.com </p>
                     </div>
                     <div class="social-media">
                         <ul>
@@ -319,18 +324,7 @@ NavBar::end();
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="name" placeholder="Тема">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="name" placeholder="Веб сайт">
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="row">
                         <div class="col-md-12">
                             <div class="input-group">
@@ -350,17 +344,20 @@ NavBar::end();
         </div>
     </div>
 </section>
-<p class="back-top"><a href="#"><b style="position: absolute;"></b><span></span></a><p>
+
 
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <p class="center">Все права защищены</p>
+            <div class="col-md-12" style="padding: 10px;">
+                <p class="center">Copyright © 2011-2017. Факультет экономики и управления.</p>
+
+<p class="center">Учебная лаборатория "Информационные технологии в экономике и управлении"</p>
 
             </div>
         </div>
     </div>
+    <p class="back-top"><a href="#"><b style="position: absolute;"></b><span></span></a><p>
 </footer>
 
 <?php $this->endBody() ?>

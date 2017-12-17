@@ -49,11 +49,11 @@ $("#list3 >a").removeAttr( "data-toggle");
 
 
 
-$('ul.nav li.dropdown').hover(function() {
+/*$('ul.nav li.dropdown').hover(function() {
     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
 }, function() {
     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-});
+});*/
 
 
 
@@ -174,6 +174,25 @@ $(document).ready(function()
         return false;
     });
 
+});
+
+
+/*==============================
+    hover img news
+==============================*/
+
+
+Modernizr.load({
+    test: Modernizr.csstransforms3d && Modernizr.csstransitions,
+    yep : ['http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js','js/jquery.hoverfold.js'],
+    nope: 'css/fallback.css',
+    callback : function( url, result, key ) {
+
+        if( url === 'js/jquery.hoverfold.js' ) {
+            $( '#grid' ).hoverfold();
+        }
+
+    }
 });
 
 
