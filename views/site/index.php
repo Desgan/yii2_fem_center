@@ -30,7 +30,11 @@ $this->registerJs($slide_hover);
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-            <div class="item active"  style="    min-height: 600px;background-position: bottom center;background-repeat: no-repeat; background-image: url('/images/slider/sl.png')">
+            <div class="item active"  style="    min-height: 600px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(/images/slider/s001.jpg);
+    background-size: cover;">
 
                 <div class="carousel-caption">
                     <h2>ЦЕНТР КАРЬЕРА</h2>
@@ -40,8 +44,12 @@ $this->registerJs($slide_hover);
                     <a href="<?= yii\helpers\Url::to(['/site/aboutus'])?>">О нас</a>
                 </div>
             </div>
-            <div class="item">
-                <img src="/images/slider/wallhaven-172772.jpg" width="1648" height="600" alt="">
+            <div class="item" style="  min-height: 600px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(/images/slider/s002.jpg);
+    background-size: cover;">
+
                 <div class="carousel-caption">
                     <h2>НАЙДИТЕ РАБОТУ МЕЧТЫ
 
@@ -56,7 +64,7 @@ $this->registerJs($slide_hover);
                 <div class="carousel-caption">
                     <h2>ПРАКТИКА</h2>
                     <h4 style="    color: #fff;">Хочешь получить опыт работы? Не знаешь с чего начать?</h4>
-                    <a href="#">Практика/стажировка</a>
+                    <a href="<?= yii\helpers\Url::to(['/user/offer/offer']) ?>">Практика/стажировка</a>
                 </div>
             </div>
         </div>
