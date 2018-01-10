@@ -181,9 +181,17 @@ JS;
 
     <?php endif;?>
 
-<header class="header-section">
+<?php if (Yii::$app->user->isGuest):?>
+
+
+
+<?php endif;?>
 
 <?php
+if (!Yii::$app->user->isGuest):?>
+
+<header class="header-section">
+    <?
 NavBar::begin([
     'brandLabel' => '<img src="/images/logo_.png" style="max-width: 250px;margin-top: -7px;"/>',
     'brandUrl' => Yii::$app->homeUrl,
@@ -337,21 +345,12 @@ echo Nav::widget([
 ]);
 
 NavBar::end();
+
+
+
 ?>
 
-    <!-- Search form -->
-    <div class="main clearfix width-search" id="cl-search">
 
-        <div class="column">
-            <div id="sb-search" class="sb-search">
-                <form>
-                    <input class="sb-search-input" placeholder="Введите поисковой запрос" type="text" value="" name="search" id="search">
-                    <input class="sb-search-submit" type="submit" value="">
-                    <span class="sb-icon-search "><i class="fa fa-search" aria-hidden="true"></i></span>
-                </form>
-            </div>
-        </div>
-    </div>
 
       <!-- <ul class="nav navbar-nav navbar-right cart-menu">
             <li><a href="#" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></a></li>
@@ -359,6 +358,22 @@ NavBar::end();
         </ul>-->
 
 </header>
+<?php endif;?>
+
+
+<!-- Search form -->
+<div class="main clearfix width-search" id="cl-search">
+
+    <div class="column">
+        <div id="sb-search" class="sb-search">
+            <form>
+                <input class="sb-search-input" placeholder="Введите поисковой запрос" type="text" value="" name="search" id="search">
+                <input class="sb-search-submit" type="submit" value="">
+                <span class="sb-icon-search "><i class="fa fa-search" aria-hidden="true"></i></span>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 <section class="search-section">

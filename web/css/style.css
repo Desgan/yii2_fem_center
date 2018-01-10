@@ -2761,3 +2761,58 @@ a.carousel-control.left, a.carousel-control.right{
 
     background-color: #333;
 }
+.background-video-container {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 80%;
+}
+.background-video-container video {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.main-image-static{
+    background-image: url("/web/video/poster.png");
+    min-height: 700px;
+    filter: grayscale(100%);
+}
+.hero {
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: left;
+    padding: 1.5em;
+}
+.content-spec{
+    position: absolute;
+    width: 100%;
+    /* margin: 140px 0px; */
+    z-index: 9999;
+    top: 140px;
+}
+.hero > .hero-title {
+    background-color: transparent !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    font-family: "Stratum2WebBold",sans-serif !important;
+    margin: 0px 0px 40px 0px;
+    padding: 32px 0px 32px 0px;
+    font-size: 5em !important;
+}
+.before-typed-string {
+    color: #fff !important;
+    font-weight: 100 !important;
+    font-size: 3em !important;
+}
+
+.hashtag-container {
+    text-align: left;
+}
+.typed {
+    color: #fff !important;
+    padding: 5px;
+    font-size: 3em;
+    text-align: left;
+    background-color: #c34500;
+    font-weight: 100 !important;
+}

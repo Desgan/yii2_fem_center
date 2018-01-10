@@ -53,6 +53,7 @@ class AppAsset extends AssetBundle
         'js/bluer.js',
         'js/paraxify.min.js',
         'js/custom.js',
+        'js/typed.min.js',
 
 
     ];

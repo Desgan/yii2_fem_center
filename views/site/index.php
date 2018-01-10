@@ -15,20 +15,105 @@ $( ".slider-section" ).hover(
       $( 'a.carousel-control.right').hide(1000);
   }
 );
+
+
+	
+			
+		//play video	
+	  setTimeout(function() {
+    $('#myVideo')[0].play();//.attr('autoplay', 'autoplay');
+}, 1000); 
+
+	 $(function(){
+	$(".typed").typed({
+		strings: ["Developers.", "Designers.", "People."],
+		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+		stringsElement: null,
+		// typing speed
+		typeSpeed: 30,
+		// time before typing starts
+		startDelay: 1200,
+		// backspacing speed
+		backSpeed: 20,
+		// time before backspacing
+		backDelay: 500,
+		// loop
+		loop: true,
+		// false = infinite
+		loopCount: 5,
+		// show cursor
+		showCursor: false,
+		// character for cursor
+		cursorChar: "|",
+		// attribute to type (null == text)
+		attr: null,
+		// either html or text
+		contentType: 'html',
+		// call when done callback function
+		callback: function() {},
+		// starting callback function before each string
+		preStringTyped: function() {},
+		//callback for every typed string
+		onStringTyped: function() {},
+		// callback for reset
+		resetCallback: function() {}
+	});
+});
+	
 JS;
 $this->registerJs($slide_hover);
 
 ?>
-<section class="slider-section">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
+<?php
+    if (Yii::$app->user->isGuest):
+?>
+        <div class="background-video-container">
+            <video src="/web/video/feymyway.mp4" id="myVideo"   loop="loop"  autobuffer="" preload="auto" muted="muted">
+                video not supported
+            </video>
+
+
+        </div>
+<?php endif;?>
+<?php
+if (!Yii::$app->user->isGuest):
+    ?>
+
+<section class="slider-section " style="position: relative;">
+
+    <div class="content-spec">
+        <div class="field field-name-field-p-1-col-main field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><div class="hero">
+                        <h3 class="hero-title">#BeaverNationWorks</h3>
+
+                        <div class="typed-container">
+                            <div id="typed-strings" style="display: none;">
+                                <p><a href="#">explore my future.</a></p>
+                                <p><a href="#">find a job or internship.</a></p>
+                                <p><a href="#">hire a beaver.</a></p>
+                                <p><a href="#">learn about Handshake.</a></p>
+                            </div>
+                            <span class="before-typed-string">I want to </span><span class="typed"></span>
+
+
+                        </div>
+                    </div>
+
+                </div></div></div>
+    </div>
+    <div class="paraxify main-image-static">
+
+    </div>
+
+
+  <!--  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
         <ol class="carousel-indicators slider-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
             <li data-target="#carousel-example-generic" data-slide-to="2"></li>
         </ol>
 
-        <!-- Wrapper for slides -->
+
         <div class="carousel-inner" role="listbox">
             <div class="item active"  style="    min-height: 600px;
     background-position: center center;
@@ -69,16 +154,16 @@ $this->registerJs($slide_hover);
             </div>
         </div>
 
-        <!-- Controls -->
+
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
             <span class="pe-7s-angle-left glyphicon-chevron-left" aria-hidden="true"></span>
         </a>
         <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
             <span class="pe-7s-angle-right glyphicon-chevron-right" aria-hidden="true"></span>
         </a>
-    </div>
+    </div>-->
 </section>
-
+<?php endif;?>
 
 
 
