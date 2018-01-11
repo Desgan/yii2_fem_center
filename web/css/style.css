@@ -1418,6 +1418,11 @@ footer.footer p a{
 /*
     RESPONSIVE STYLE
  */
+@media (min-width: 1900px){
+     .spec-prezentaion-block{
+        top: 200px !important;
+    }
+}
 @media (max-width: 1200px){
     .product-hover a {
         padding: 2%;
@@ -2815,4 +2820,192 @@ a.carousel-control.left, a.carousel-control.right{
     text-align: left;
     background-color: #c34500;
     font-weight: 100 !important;
+}
+.spec-nakladka{
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    transition: 0.2s;
+}
+.header-module-header{
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+    padding: 20px 30px;
+}
+.sign-spec-btn{
+    height: 50px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 35px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid hsla(0,0%,100%,.3);
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 15px 5px transparent;
+    box-shadow: 0 0 15px 5px transparent;
+    -webkit-transition: background-color .25s ease,color .25s ease;
+    transition: background-color .25s ease,color .25s ease;
+}
+.sign-spec-btn:hover{
+    background-color: #0079c2;
+    color: #ffffff;
+}
+.login-spec-btn{
+    height: 50px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 35px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid hsla(0,0%,100%,.3);
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 15px 5px transparent;
+    box-shadow: 0 0 15px 5px transparent;
+    -webkit-transition: background-color .25s ease,color .25s ease;
+    transition: background-color .25s ease,color .25s ease;
+    margin-right: 15px;
+}
+.login-spec-btn:hover{
+    background-color: #0079c2;
+    color: #ffffff;
+}
+.btn-right-guest{
+    text-align: end;
+}
+.presentation-module-title{
+    font-size: 50px;
+    color: #fff;
+}
+.spec-prezentaion-block{
+    position: absolute;
+    top:130px;
+    color: #fff;
+    z-index: 99;
+    font-weight: bold;
+    width: 1170px;
+}
+.presentation-module-divider{
+    width: 141px;
+    height: 4px;
+    opacity: .2;
+    background-color: #fff;
+    margin: 50px auto;
+}
+.presentation-module-subtitle{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 42px;
+}
+.presentation-module-link-spec{
+    height: 50px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 35px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid hsla(0,0%,100%,.3);
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 15px 5px transparent;
+    box-shadow: 0 0 15px 5px transparent;
+    -webkit-transition: background-color .25s ease,color .25s ease;
+    transition: background-color .25s ease,color .25s ease;
+    margin-right: 15px;
+}
+.presentation-module-link-1:hover{
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(74,143,226,.2), 0 8px 6px 0 rgba(74,143,226,.1), 0 1px 2px 0 rgba(0,0,0,.3);
+    box-shadow: 0 10px 30px 0 rgba(74,143,226,.2), 0 8px 6px 0 rgba(74,143,226,.1), 0 1px 2px 0 rgba(0,0,0,.3);
+    color: #fff;
+
+}
+.presentation-module-link-2:hover{
+    background-color: #82b050;
+    border-color: #82b050;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(9,44,80,.1), 0 8px 6px 0 rgba(133,179,83,.2), 0 1px 2px 0 rgba(0,0,0,.2);
+    box-shadow: 0 10px 30px 0 rgba(9,44,80,.1), 0 8px 6px 0 rgba(133,179,83,.2), 0 1px 2px 0 rgba(0,0,0,.2);
+    color: #fff;
+}
+.presentation-module-link-3:hover{
+    background-color: #8277ea;
+    border-color: #8277ea;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(9,44,80,.1), 0 8px 6px 0 rgba(87,76,193,.3), 0 1px 2px 0 rgba(0,0,0,.2);
+    box-shadow: 0 10px 30px 0 rgba(9,44,80,.1), 0 8px 6px 0 rgba(87,76,193,.3), 0 1px 2px 0 rgba(0,0,0,.2);
+    color: #fff;
+}
+.presentation-module-link-4:hover{
+    background-color: #7ad8bb;
+    border-color: #7ad8bb;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(9,44,80,.1), 0 8px 6px 0 rgba(133,179,83,.2), 0 1px 2px 0 rgba(0,0,0,.2);
+    box-shadow: 0 10px 30px 0 rgba(9,44,80,.1), 0 8px 6px 0 rgba(133,179,83,.2), 0 1px 2px 0 rgba(0,0,0,.2);
+    color: #fff;
+}
+.presentation-content-btn{
+    top: 100px;
+    position: relative;
+}
+.fon-about-myway{
+    background-image: url("/web/images/slider/people_lot.png");
+}
+.navbar-nav > li > .dropdown-menu{
+    z-index: 999999999999;
+}
+div.art-header-png {
+    /*position: absolute;*/
+    background-color: #ffffcb;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    background-image: url("/web/images/header.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
 }

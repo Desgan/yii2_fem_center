@@ -189,6 +189,7 @@ JS;
 
 <?php
 if (!Yii::$app->user->isGuest):?>
+    <div class="art-header-png"></div>
 
 <header class="header-section">
     <?
@@ -209,26 +210,26 @@ echo Nav::widget([
             ['label' => 'Профиль Работодателя', 'url' => ['/user/user/profile']],
                 Yii::$app->user->isGuest ? (
                 [
-                    'label' => 'Информация о специальностях ФЭУ','options'=>['id'=>'inside-list'], 'url' => ['/login'],
-                    'items' => [
+                    'label' => 'Наши Специальности','options'=>['id'=>'inside-list'], 'url' => ['/login'],
+                  /*  'items' => [
 
                         ['label' => 'I ступень', 'url' => ['/login']],
 
                         ['label' => 'II ступень', 'url' => ['/login']],
                         ['label' => 'Практика', 'url' => ['/login']],
-                    ]
+                    ]*/
 
                 ]
                 ) : (
                 [
-                    'label' => 'Информация о специальностях ФЭУ', 'options'=>['id'=>'inside-list'], 'url' => ['#'],
+                    'label' => 'Наши Специальности', 'options'=>['id'=>'inside-list'], 'url' => ['/site/ourspeciality'],
 
-                    'items' => [
+                    /*'items' => [
                         ['label' => 'I ступень', 'url' => ['#']],
 
                         ['label' => 'II ступень', 'url' => ['#']],
                         ['label' => 'Практика', 'url' => ['#']],
-                    ]
+                    ]*/
 
                 ]
                 ),
@@ -361,7 +362,7 @@ NavBar::end();
 <?php endif;?>
 
 
-<!-- Search form -->
+<!-- Search form
 <div class="main clearfix width-search" id="cl-search">
 
     <div class="column">
@@ -373,7 +374,7 @@ NavBar::end();
             </form>
         </div>
     </div>
-</div>
+</div>-->
 
 
 <section class="search-section">
@@ -392,7 +393,7 @@ NavBar::end();
 </section><!-- end of /.news letter section -->
 
 <?= $content ?>
-<section class="contact-section">
+<section class="col-md-12 contact-section">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -464,7 +465,7 @@ NavBar::end();
 </section>
 
 
-<footer class="footer">
+<footer class="col-md-12 footer">
     <div class="container">
         <div class="row">
             <div class="col-md-12" style="padding: 10px;">

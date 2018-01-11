@@ -153,5 +153,8 @@ class SiteController extends Controller
     {
         return $this->render('territorygraduates');
     }
-
+    public function actionOurspeciality()
+    {
+        return $this->render('ourspeciality');
+    }
 }

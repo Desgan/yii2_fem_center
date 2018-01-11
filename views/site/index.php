@@ -67,17 +67,53 @@ $this->registerJs($slide_hover);
 <?php
     if (Yii::$app->user->isGuest):
 ?>
+
+        <header class="header-module-header  ">
+            <div class="col-md-6">
+                <img src="/images/logo__.png"/>
+
+            </div>
+            <div class="col-md-6 btn-right-guest">
+
+                <a href="<?= yii\helpers\Url::to(['/signup'])?>" class="login-spec-btn">
+                    Регистрация
+                </a>
+                <a href="<?= yii\helpers\Url::to(['/login'])?>" class="sign-spec-btn">
+                    Войти
+                </a>
+            </div>
+
+        </header>
+
+
+
         <div class="background-video-container">
             <video src="/web/video/feymyway.mp4" id="myVideo"   loop="loop"  autobuffer="" preload="auto" muted="muted">
                 video not supported
             </video>
+            <div class="container">
+                <div class="spec-prezentaion-block">
+                    <h1 class="presentation-module-title">Центр планирования и развития карьеры</h1>
+                    <div class="presentation-module-divider"></div>
+                    <div class="presentation-module-subtitle">Профессиональное развитие и карьерный рост студентов и выпускников</div>
+                    <div class="presentation-content-btn">
+                        <a class="presentation-module-link-spec presentation-module-link-1" href="<?= yii\helpers\Url::to(['/site/aboutus'])?>">О нас</a>
+                        <a class="presentation-module-link-spec presentation-module-link-2" href="#">Что мы предлагаем</a>
+                        <a class="presentation-module-link-spec presentation-module-link-3" href="#">Наши достижения</a>
+                        <a class="presentation-module-link-spec presentation-module-link-4" href="#">не помню</a>
+                    </div>
+                </div>
 
+            </div>
+            <div class="spec-nakladka" style="opacity: 0.6;"></div>
 
         </div>
 <?php endif;?>
 <?php
 if (!Yii::$app->user->isGuest):
     ?>
+
+
 
 <section class="slider-section " style="position: relative;">
 
