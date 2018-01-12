@@ -3000,12 +3000,65 @@ a.carousel-control.left, a.carousel-control.right{
 }
 div.art-header-png {
     /*position: absolute;*/
-    background-color: #ffffcb;
+    background-color: #ffffff;
     left: 0;
     top: 0;
     width: 100%;
     height: 150px;
-    background-image: url("/web/images/header.jpg");
+    background-image: url("/web/images/feu.jpg");
     background-repeat: no-repeat;
     background-position: center center;
+}
+.back-speciality{
+    background-color: white;
+}
+.fon-1-back {
+background-image: url("/web/images/img-spec.jpg");
+
+    min-height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.inside-right-specialyty{
+    margin-top: 50px;
+;
+
+}
+.leadstyle-text{
+    text-align: left;
+    line-height: 61px;
+    font-weight: bold;
+    color:#184962
+}
+
+.text-right-specility{
+    color: #000000;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: justify;
+}
+.my-tab-pane   img{
+    width: 100%;
+}
+
+.width-specilaty-tab{
+
+    max-width: 650px;
+    margin: 0 auto;
+}
+.my-content-tab > .my-tab-pane{
+    margin-top: 0px !important;
+}
+.fon-specialty-list{
+    background-color: #003ca4;
+}
+.title-h3-tab{
+    background-color: #ab5a66 !important;
+
+    color: #fff;
+}
+.my-panel-default-tab{
+    border-radius: 0px !important;
+    border-color: #ab5a66;
 }
